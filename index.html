@@ -1,0 +1,3001 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SlimaX Powder - Ayurvedic Weight Loss</title>
+
+  <!-- Google Fonts for Hindi and English Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Poppins:wght@400;600;700&display=swap"
+    rel="stylesheet">
+
+  <style>
+/* ========================================================
+   Ayurvedic & Earthy Landing Page
+   Theme Colors:
+   - Primary: #4E342E (Deep Earthy Brown)
+   - Accent: #C6A227 (Ayurvedic Herbal Gold)
+   - Background: #FBF6EC (Warm Cream / Off-White)
+   - Max Content Width: 450px (Mobile-First)
+======================================================== */
+
+:root {
+  --primary: #4E342E;
+  --primary-dark: #372420;
+  --primary-light: #6D4C41;
+  --accent: #C6A227;
+  --accent-light: #DFC052;
+  --bg-page: #FBF6EC;
+  --bg-card: #FFFFFF;
+  --text-primary: #3E2723;
+  --text-muted: #5D4037;
+  --text-white: #FFFFFF;
+  --border-subtle: rgba(78, 52, 46, 0.12);
+  --shadow-sm: 0 2px 8px rgba(78, 52, 46, 0.08);
+  --shadow-md: 0 4px 16px rgba(78, 52, 46, 0.14);
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --font-main: 'Noto Sans Devanagari', 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: #EFE7D8;
+  /* Subtle contrasting frame for desktop view */
+  color: var(--text-primary);
+  line-height: 1.5;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 450px Maximum Mobile-First Container */
+.page-container {
+  width: 100%;
+  max-width: 450px;
+  min-height: 100vh;
+  background-color: var(--bg-page);
+  position: relative;
+  overflow-x: hidden;
+  box-shadow: 0 0 24px rgba(78, 52, 46, 0.18);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Section 1: Hero Banner */
+.section-hero {
+  width: 100%;
+  position: relative;
+  background-color: var(--bg-page);
+}
+
+.banner-wrapper {
+  width: 100%;
+  position: relative;
+  line-height: 0;
+}
+
+.banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Responsive adjustments */
+@media (max-width: 450px) {
+  body {
+    background-color: var(--bg-page);
+  }
+
+  .page-container {
+    box-shadow: none;
+  }
+}
+
+/* ========================================================
+   Section 2: Daily Pain Points (Notebook Pinned Cards)
+======================================================== */
+.section-pain-points {
+  width: 100%;
+  padding: 24px 16px 36px 16px;
+  background-color: var(--bg-page);
+}
+
+/* Notebook ruled paper background */
+.notebook-sheet {
+  width: 100%;
+  background-color: #FCF8F2;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(78, 52, 46, 0.15);
+  box-shadow: 0 4px 20px rgba(78, 52, 46, 0.08);
+  padding: 26px 14px;
+  position: relative;
+  /* Ruled horizontal notebook lines */
+  background-image: repeating-linear-gradient(to bottom,
+      transparent,
+      transparent 31px,
+      rgba(78, 52, 46, 0.07) 31px,
+      rgba(78, 52, 46, 0.07) 32px);
+  background-position: 0 10px;
+}
+
+/* Header styling */
+.pain-header {
+  text-align: center;
+  margin-top: 4px;
+  margin-bottom: 26px;
+  padding: 0 4px;
+}
+
+.pain-title {
+  font-size: 21px;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1.4;
+}
+
+.pain-title span {
+  color: var(--primary);
+  font-weight: 800;
+  font-size: 19px;
+}
+
+.divider-line {
+  height: 2px;
+  width: 48px;
+  background: linear-gradient(to right, transparent, var(--accent), transparent);
+}
+
+.divider-icon {
+  color: var(--accent);
+  font-size: 14px;
+}
+
+/* Pinned Cards Timeline */
+.pinned-cards-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  position: relative;
+  padding: 10px 0;
+}
+
+/* Card Wrapper */
+.pin-card-wrapper {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  transition: transform 0.25s ease;
+}
+
+/* Slight alternating offsets matching the reference design */
+.pin-card-wrapper.shift-left {
+  margin-left: 4%;
+  margin-right: auto;
+}
+
+.pin-card-wrapper.shift-right {
+  margin-left: auto;
+  margin-right: 4%;
+}
+
+.pin-card-wrapper.shift-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 3D Pushpins */
+.pin {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  position: absolute;
+  top: -11px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.35),
+    inset -2px -2px 4px rgba(0, 0, 0, 0.4),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.8);
+}
+
+.pin::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.18);
+  filter: blur(2px);
+  z-index: -1;
+}
+
+.pin-red {
+  background: radial-gradient(circle at 35% 35%, #ff7675, #d63031 65%, #800f10);
+}
+
+.pin-blue {
+  background: radial-gradient(circle at 35% 35%, #74b9ff, #0984e3 65%, #074b83);
+}
+
+.pin-yellow {
+  background: radial-gradient(circle at 35% 35%, #ffeaa7, #fdcb6e 60%, #c6a227);
+}
+
+.pin-green {
+  background: radial-gradient(circle at 35% 35%, #55efc4, #00b894 65%, #00624f);
+}
+
+.pin-purple {
+  background: radial-gradient(circle at 35% 35%, #a29bfe, #6c5ce7 65%, #3d2b99);
+}
+
+/* Dashed connecting thread lines */
+.thread-line {
+  position: absolute;
+  bottom: -36px;
+  height: 36px;
+  width: 70px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.thread-to-right {
+  left: 50%;
+  border-right: 3px dashed #C6A227;
+  border-bottom: 3px dashed #C6A227;
+  border-bottom-right-radius: 20px;
+  opacity: 0.85;
+}
+
+.thread-to-left {
+  right: 50%;
+  border-left: 3px dashed #C6A227;
+  border-bottom: 3px dashed #C6A227;
+  border-bottom-left-radius: 20px;
+  opacity: 0.85;
+}
+
+/* Pinned Note Card */
+.pin-card {
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 20px 14px 14px 14px;
+  box-shadow:
+    0 10px 24px -4px rgba(78, 52, 46, 0.16),
+    0 2px 8px rgba(78, 52, 46, 0.08);
+  border: 2px solid rgba(198, 162, 39, 0.35);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.card-number {
+  font-size: 22px;
+  font-weight: 900;
+  font-style: italic;
+  color: var(--accent);
+  margin-top: 2px;
+  margin-bottom: 4px;
+  line-height: 1;
+  letter-spacing: 0.5px;
+}
+
+.card-text {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1.4;
+  margin-bottom: 12px;
+  padding: 0 4px;
+}
+
+.card-img-box {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #F5EFE6;
+  aspect-ratio: 16 / 10;
+  border: 1px solid rgba(78, 52, 46, 0.08);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.04);
+}
+
+.problem-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.pin-card:hover .problem-img {
+  transform: scale(1.03);
+}
+
+/* Section Conclusion Callout */
+.pain-conclusion {
+  margin-top: 32px;
+  padding: 14px 16px;
+  background: linear-gradient(135deg, rgba(78, 52, 46, 0.08), rgba(198, 162, 39, 0.12));
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius-sm);
+  text-align: center;
+}
+
+.conclusion-text {
+  font-size: 14px;
+  color: var(--primary);
+  line-height: 1.5;
+}
+
+.conclusion-text strong {
+  color: #372420;
+  font-weight: 700;
+}
+
+/* ========================================================
+   Section 3: Product Showcase (Poster Arc Style as per User Reference)
+======================================================== */
+.section-product-showcase {
+  width: 100%;
+  padding: 16px 14px 34px;
+  background-color: var(--bg-page);
+}
+
+/* Section 3: Heading Just Above the Box matching other page headings ("jaise aur heading hai waise") */
+.product-showcase-header {
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 0 4px;
+}
+
+.product-showcase-title {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1.35;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+}
+
+.product-showcase-title::after {
+  content: "";
+  display: block;
+  width: 52px;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 2px;
+  margin: 8px auto 0;
+}
+
+/* Luxury Poster Card with Golden Background */
+.product-poster-card {
+  position: relative;
+  width: 100%;
+  border-radius: 30px;
+  background: radial-gradient(circle at 85% 45%, #F4D37A 0%, #E5B338 35%, #C88610 70%, #9E6103 100%);
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  box-shadow:
+    0 18px 42px rgba(78, 52, 46, 0.24),
+    0 4px 14px rgba(0, 0, 0, 0.12);
+  padding: 24px 14px;
+  overflow: hidden;
+  margin-bottom: 22px;
+}
+
+/* Main Showcase Area: Left Product Jar, Right Feature Nodes */
+.poster-showcase-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+  margin-top: 4px;
+}
+
+/* Product Left - Enlarged ("product image aur bada karo") */
+.poster-product-wrap {
+  width: 57%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.poster-product-img-box {
+  width: 245px;
+  height: 245px;
+  max-width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 26px;
+  overflow: hidden;
+  background: #FFFFFF;
+  border: 3.5px solid rgba(255, 255, 255, 0.95);
+  box-shadow:
+    0 18px 42px rgba(0, 0, 0, 0.38),
+    0 2px 8px rgba(0, 0, 0, 0.12);
+  transition: transform 0.35s ease;
+}
+
+.poster-product-card:hover .poster-product-img-box {
+  transform: scale(1.03);
+}
+
+.poster-product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.poster-ayur-badge {
+  margin-top: 14px;
+  background: rgba(36, 18, 6, 0.88);
+  backdrop-filter: blur(4px);
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 800;
+  padding: 7px 16px;
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.28);
+  white-space: nowrap;
+}
+
+/* Features Right */
+.poster-features-arc {
+  width: 41%;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  position: relative;
+  padding-left: 2px;
+}
+
+.arc-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: transform 0.25s ease;
+}
+
+.arc-node-circle {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 2.5px solid #FFFFFF;
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+}
+
+.arc-icon {
+  font-size: 22px;
+  line-height: 1;
+}
+
+.arc-label {
+  font-size: 16px;
+  font-weight: 800;
+  color: #241206;
+  line-height: 1.35;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.4);
+}
+
+/* Description Below Poster */
+.product-info-box {
+  width: 100%;
+  text-align: center;
+  padding: 0 6px;
+}
+
+.product-desc {
+  font-size: 16.5px;
+  font-weight: 500;
+  color: #4A3E38;
+  line-height: 1.65;
+  margin: 0 auto;
+  max-width: 420px;
+  text-align: center;
+}
+
+/* ========================================================
+   Section 4: महत्वपूर्ण पहलू (Alternating Rows as per Reference)
+   Dark Background Theme as requested ("background dark kar do")
+======================================================== */
+.section-aspects {
+  width: 100%;
+  padding: 36px 12px 48px 12px;
+  background-color: #261713;
+  /* Rich Deep Dark Chocolate Ayurvedic Background */
+  position: relative;
+  overflow: hidden;
+}
+
+.aspects-header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 0 4px;
+}
+
+.aspects-title {
+  font-size: 26px;
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.35;
+  position: relative;
+  display: inline-block;
+}
+
+.aspects-title::after {
+  content: "";
+  display: block;
+  width: 52px;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 2px;
+  margin: 10px auto 0;
+}
+
+.aspects-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.aspect-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+/* Outer image box with dashed gold border - Enlarged ("aur bade karo") */
+.aspect-img-wrapper {
+  position: relative;
+  width: 185px;
+  height: 185px;
+  flex-shrink: 0;
+  border: 2.5px dashed rgba(229, 179, 42, 0.75);
+  border-radius: 28px;
+  padding: 7px;
+  background: #FFFFFF;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4);
+}
+
+.aspect-img-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 22px;
+  border: 2.5px solid #261713;
+  overflow: hidden;
+  background: #FBF6EC;
+}
+
+.aspect-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.aspect-img-wrapper:hover .aspect-img {
+  transform: scale(1.06);
+}
+
+/* Round Number Badge on the corner - Gold Radiant Badge */
+.aspect-num-badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #F39C12 0%, #D68910 100%);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 800;
+  border: 3px solid #FFFFFF;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45);
+  z-index: 10;
+}
+
+.aspect-num-badge.badge-left {
+  right: auto;
+  left: -10px;
+}
+
+/* Text Pill Card - Crisp White with Deep Shadow against Dark Background */
+.aspect-text-card {
+  flex: 1;
+  background: #FFFFFF;
+  border-radius: 22px;
+  padding: 16px 14px;
+  border-left: 6px solid var(--accent);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-right: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  min-width: 0;
+}
+
+.aspect-row.img-right .aspect-text-card {
+  border-left: 1px solid rgba(0, 0, 0, 0.05);
+  border-right: 6px solid var(--accent);
+}
+
+.aspect-text-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.4);
+}
+
+.aspect-card-title {
+  font-size: 19px;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1.3;
+  margin-bottom: 6px;
+}
+
+.aspect-card-desc {
+  font-size: 15px;
+  font-weight: 500;
+  color: #4A3E38;
+  line-height: 1.5;
+}
+
+/* ========================================================
+   Section 5: प्रकृति से चुनी हुई जड़ी-बूटियाँ (Leaf Arch Cards)
+   Now using the unified warm Ayurvedic page palette
+======================================================== */
+.section-herbs {
+  width: 100%;
+  padding: 36px 12px 24px 12px;
+  background-color: var(--bg-page);
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(198, 162, 39, 0.2);
+}
+
+.herbs-header {
+  margin-bottom: 26px;
+  padding: 0 4px;
+  text-align: center;
+}
+
+.herbs-title {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1.35;
+}
+
+.herbs-title span {
+  color: var(--accent);
+  display: inline;
+}
+
+.herbs-cards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.herb-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: #FFFFFF;
+  border-radius: 28px;
+  padding: 16px 18px 16px 16px;
+  box-shadow: 0 8px 24px rgba(78, 52, 46, 0.09);
+  border: 1.5px solid rgba(198, 162, 39, 0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.herb-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(78, 52, 46, 0.14);
+  border-color: var(--accent);
+}
+
+/* Distinctive Leaf-Arch Image Box - Extra large as requested ("image aur bade kar do") */
+.herb-img-arch {
+  width: 135px;
+  height: 135px;
+  flex-shrink: 0;
+  border-radius: 75px 22px 75px 22px;
+  border: 3px solid var(--primary);
+  overflow: hidden;
+  background: #FBF6EC;
+  box-shadow: 0 5px 15px rgba(78, 52, 46, 0.15);
+}
+
+.herb-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.herb-card:hover .herb-img {
+  transform: scale(1.08);
+}
+
+.herb-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.herb-name {
+  font-size: 23px;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1.3;
+  margin-bottom: 6px;
+}
+
+.herb-desc {
+  font-size: 16.5px;
+  font-weight: 500;
+  color: #4A3E38;
+  line-height: 1.55;
+}
+
+/* ==========================================================================
+   Doctor Recommendation Section ("डॉक्टर की सिफारिश")
+   ========================================================================== */
+.section-doctor-recommend {
+  width: 100%;
+  padding: 22px 16px 36px;
+  background-color: var(--bg-page);
+  position: relative;
+  border-top: 1px solid rgba(198, 162, 39, 0.2);
+}
+
+.doctor-header {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.doctor-title {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1.35;
+  text-align: center;
+  position: relative;
+}
+
+.doctor-title::after {
+  content: "";
+  display: block;
+  width: 52px;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 2px;
+  margin: 8px auto 0;
+}
+
+.doctor-card {
+  background: #FFFFFF;
+  border-radius: 24px;
+  border: 1.5px solid rgba(198, 162, 39, 0.4);
+  box-shadow: 0 10px 32px rgba(78, 52, 46, 0.1);
+  padding: 16px 16px 22px;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.doctor-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 38px rgba(78, 52, 46, 0.14);
+}
+
+/* Doctor Image Frame with Tag */
+.doctor-img-frame {
+  position: relative;
+  width: 100%;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  margin-bottom: 18px;
+  background: #F5EBE1;
+}
+
+.doctor-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.doctor-card:hover .doctor-img {
+  transform: scale(1.02);
+}
+
+.doctor-tag {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  right: 12px;
+  background: rgba(38, 23, 19, 0.88);
+  backdrop-filter: blur(8px);
+  color: #FFFFFF;
+  border-radius: 30px;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  border: 1px solid rgba(198, 162, 39, 0.4);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.tag-icon {
+  font-size: 15px;
+}
+
+/* Doctor Guidance Content - Enlarged Text ("text bade kar do") */
+.doctor-content {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.doctor-p-main {
+  font-size: 18px;
+  color: #2D1A16;
+  line-height: 1.6;
+}
+
+.doctor-p-main strong {
+  color: var(--primary);
+  font-weight: 800;
+}
+
+.doctor-p-sub {
+  font-size: 16.5px;
+  color: #55433C;
+  line-height: 1.6;
+}
+
+/* Callout Box matching user screenshot style */
+.doctor-callout-box {
+  background: #FDF7F8;
+  border-left: 4px solid #801436;
+  border-radius: 0 14px 14px 0;
+  padding: 16px 18px;
+  margin-top: 4px;
+  box-shadow: 0 2px 8px rgba(128, 20, 54, 0.05);
+}
+
+.doctor-callout-box p {
+  font-size: 17px;
+  line-height: 1.6;
+  color: #381A22;
+  margin: 0;
+}
+
+.doctor-callout-box strong {
+  color: #801436;
+  font-weight: 800;
+}
+
+/* ==========================================================================
+   Section 6: Trust & Quality Certifications ("गुणवत्ता और पारदर्शिता का भरोसा")
+   ========================================================================== */
+.section-trust-quality {
+  padding: 38px 16px 44px;
+  background-color: #261713;
+  /* Rich Deep Dark Chocolate Ayurvedic Background */
+  position: relative;
+  border-top: 1px solid rgba(198, 162, 39, 0.25);
+}
+
+.trust-header {
+  text-align: center;
+  margin-bottom: 26px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.trust-title {
+  font-size: 23px;
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.35;
+  margin-bottom: 0;
+  position: relative;
+}
+
+.trust-title::after {
+  content: "";
+  display: block;
+  width: 52px;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 2px;
+  margin: 10px auto 0;
+}
+
+.trust-subtitle-badge {
+  display: inline-block;
+  background: #FFFFFF;
+  border: 1.5px solid rgba(198, 162, 39, 0.5);
+  border-radius: 30px;
+  padding: 8px 18px;
+  box-shadow: 0 4px 12px rgba(78, 52, 46, 0.08);
+}
+
+.trust-subtitle-badge span {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: 0.3px;
+}
+
+/* 2x2 Grid with Uniform, Equal-Sized Badge Cards */
+.trust-badges-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  width: 100%;
+}
+
+.trust-card {
+  background: #FFFFFF;
+  border-radius: 20px;
+  border: 2px solid rgba(198, 162, 39, 0.45);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  padding: 18px 12px 14px;
+  padding: 16px 10px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  position: relative;
+  overflow: hidden;
+  min-height: 175px;
+}
+
+.trust-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+  border-color: var(--accent);
+}
+
+/* Image container inside card - perfectly centered and consistent */
+/* Image container inside card - tall & centered for prominent display */
+.trust-img-wrap {
+  width: 100%;
+  height: 95px;
+  height: 115px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+  margin-bottom: 6px;
+  padding: 0;
+  background: transparent;
+  overflow: hidden;
+}
+
+/* All cert images standardized to the same size */
+/* All cert images enlarged and visually equalized ("bada karo and same size") */
+.trust-img {
+  width: 90px;
+  height: 90px;
+  max-width: 90px;
+  max-height: 90px;
+  width: 105px;
+  height: 105px;
+  max-width: 100%;
+  max-height: 105px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+}
+
+/* FSSAI logo is wide-aspect, balanced so it matches circular badges in visual weight */
+/* 1. GMP Badge (scaled to overcome whitespace in asset and match others) */
+.trust-card:nth-child(1) .trust-img {
+  width: 118px;
+  height: 118px;
+  max-width: 118px;
+  max-height: 118px;
+  transform: scale(1.3);
+}
+
+/* 2. ISO Badge (matched to testing badge visual diameter) */
+.trust-card:nth-child(2) .trust-img {
+  width: 112px;
+  height: 112px;
+  max-width: 112px;
+  max-height: 112px;
+  transform: scale(1.15);
+}
+
+/* 3. FSSAI Logo (wide rectangle scaled up to match visual presence of circular stamps) */
+.trust-card:nth-child(3) .trust-img {
+  width: 110px;
+  max-width: 110px;
+  width: 135px;
+  height: 85px;
+  max-width: 95%;
+  max-height: 85px;
+  transform: scale(1.22);
+}
+
+/* 4. Testing Badge */
+.trust-card:nth-child(4) .trust-img {
+  width: 108px;
+  height: 108px;
+  max-width: 108px;
+  max-height: 108px;
+  transform: scale(1.02);
+}
+
+.trust-card:hover .trust-img {
+  transform: scale(1.06);
+  filter: brightness(1.06);
+}
+
+.trust-card-label {
+  font-size: 15px;
+  font-size: 15.5px;
+  font-weight: 800;
+  color: #261713;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding-top: 2px;
+}
+
+/* ==========================================================================
+   Section 7: Order / Enquiry Form ("Order Now - Slimax की जानकारी प्राप्त करें")
+   ========================================================================== */
+.section-order-form {
+  padding: 36px 16px 44px;
+  background: linear-gradient(180deg, #FBF6EC 0%, #F5EBE1 100%);
+  position: relative;
+}
+
+.order-form-container {
+  background: #FFFFFF;
+  border-radius: 24px;
+  border: 2px solid rgba(198, 162, 39, 0.45);
+  box-shadow:
+    0 14px 38px rgba(78, 52, 46, 0.12),
+    0 2px 8px rgba(198, 162, 39, 0.15);
+  padding: 28px 20px 24px;
+  position: relative;
+  text-align: center;
+}
+
+/* Order Now Top Badge */
+.order-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: #4E342E;
+  color: #F8E7BE;
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 6px 16px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+  box-shadow: 0 4px 12px rgba(78, 52, 46, 0.25);
+}
+
+.badge-dot {
+  width: 8px;
+  height: 8px;
+  background: #2ECC71;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #2ECC71;
+  animation: badgeDotPulse 1.8s infinite ease-in-out;
+}
+
+@keyframes badgeDotPulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.3);
+    opacity: 0.6;
+  }
+}
+
+.order-form-title {
+  font-size: 23px;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1.35;
+  margin-bottom: 22px;
+  letter-spacing: -0.2px;
+}
+
+/* Form Styles */
+.lead-order-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  text-align: left;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-label {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.label-icon {
+  font-size: 14px;
+}
+
+/* Input Wrapper & Left Icons */
+.input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.input-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.form-input {
+  width: 100%;
+  height: 52px;
+  padding: 0 16px 0 46px;
+  border-radius: 12px;
+  border: 1.5px solid #E2D9CC;
+  background: #FAF7F2;
+  font-size: 15px;
+  color: #2E1F1B;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  font-family: inherit;
+}
+
+.form-input::placeholder {
+  color: #9C8E82;
+  font-size: 14px;
+}
+
+.form-input:focus {
+  border-color: var(--accent);
+  background: #FFFFFF;
+  box-shadow: 0 0 0 3px rgba(198, 162, 39, 0.25);
+}
+
+/* Invalid State Border matching user reference */
+.form-input.is-invalid {
+  border-color: #BA134B !important;
+  background: #FFFFFF !important;
+  box-shadow: 0 0 0 1.5px #BA134B !important;
+}
+
+/* Error Tooltip Box matching user reference */
+.field-error-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #FFFFFF;
+  border-radius: 12px;
+  padding: 10px 14px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  margin-top: 4px;
+  animation: errorFadeIn 0.25s ease-out;
+}
+
+@keyframes errorFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.error-badge-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  background: #F37021;
+  color: #FFFFFF;
+  font-weight: 800;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.error-text {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #1F1113;
+  line-height: 1.4;
+}
+
+/* High-Converting CTA Submit Button */
+.order-submit-btn {
+  width: 100%;
+  height: 56px;
+  margin-top: 6px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #F39C12 0%, #D68910 50%, #B9770E 100%);
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: 800;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow:
+    0 6px 18px rgba(214, 137, 16, 0.4),
+    inset 0 1px 1px rgba(255, 255, 255, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.order-submit-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 70%;
+  height: 100%;
+  background: linear-gradient(90deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.35) 50%,
+      transparent 100%);
+  transform: skewX(-20deg);
+  animation: btnShineSweep 3.5s infinite ease-in-out;
+}
+
+@keyframes btnShineSweep {
+
+  0%,
+  65% {
+    left: -120%;
+  }
+
+  100% {
+    left: 220%;
+  }
+}
+
+.order-submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(214, 137, 16, 0.55);
+}
+
+.order-submit-btn:active {
+  transform: translateY(1px);
+}
+
+.btn-arrow {
+  font-size: 18px;
+  transition: transform 0.25s ease;
+}
+
+.order-submit-btn:hover .btn-arrow {
+  transform: translateX(4px);
+}
+
+/* Form Feedback Notification */
+.form-feedback {
+  display: none;
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 4px;
+}
+
+.form-feedback.success {
+  display: block;
+  background: #E8F8F0;
+  color: #196F3D;
+  border: 1px solid #A9DFBF;
+}
+
+.form-feedback.error {
+  display: block;
+  background: #FDEDEC;
+  color: #922B21;
+  border: 1px solid #F5B7B1;
+}
+
+/* Trust Subtext Strip */
+.order-trust-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding-top: 10px;
+  font-size: 12.5px;
+  color: #6C5B52;
+  font-weight: 600;
+  text-align: center;
+}
+
+.trust-pill {
+  white-space: nowrap;
+}
+
+.trust-sep {
+  color: var(--accent);
+  font-weight: 900;
+}
+
+/* ==========================================================================
+   Section 8: Customer Experiences ("ग्राहकों के सच्चे अनुभव")
+   ========================================================================== */
+.section-customer-reviews {
+  padding: 36px 16px 20px;
+  background-color: #FDF9F3;
+  position: relative;
+  border-top: 1px solid rgba(198, 162, 39, 0.2);
+}
+
+.reviews-header {
+  text-align: center;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reviews-badge {
+  display: inline-block;
+  background: rgba(198, 162, 39, 0.12);
+  border: 1px solid rgba(198, 162, 39, 0.5);
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 6px 16px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.reviews-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1.35;
+  position: relative;
+}
+
+.reviews-title::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 2px;
+  margin: 8px auto 0;
+}
+
+.reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.review-card {
+  background: #FFFFFF;
+  border-radius: 20px;
+  border: 1.5px solid rgba(229, 179, 42, 0.35);
+  box-shadow: 0 8px 24px rgba(78, 52, 46, 0.08);
+  padding: 20px 18px 18px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(78, 52, 46, 0.12);
+}
+
+/* Faint Quote Mark in Upper-Right Corner matching reference */
+.quote-watermark {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  font-size: 42px;
+  line-height: 1;
+  color: #E8EDF5;
+  font-family: Georgia, serif;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* User Row: Avatar + Name + Verified + Location */
+.review-user-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 10px;
+}
+
+.review-avatar-frame {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  border: 2.5px solid #F0B323;
+  overflow: hidden;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(240, 179, 35, 0.28);
+  background: #FAF7F2;
+}
+
+.review-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.review-user-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.user-name-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 3px;
+}
+
+.user-name {
+  font-size: 16.5px;
+  font-weight: 800;
+  color: #2E1F1B;
+  line-height: 1.2;
+}
+
+/* Verified Pill Badge */
+.verified-pill {
+  background: #E8F8F0;
+  color: #27AE60;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 12px;
+  border: 1px solid rgba(39, 174, 96, 0.25);
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+/* Location Pin */
+.user-location {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #7B61FF;
+  line-height: 1.3;
+}
+
+/* Star Rating */
+.review-stars {
+  color: #F5A623;
+  font-size: 16px;
+  letter-spacing: 2px;
+  margin: 6px 0 10px;
+}
+
+/* Review Text */
+.review-text {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: #3D352E;
+  font-weight: 500;
+  text-align: left;
+}
+
+/* ==========================================================================
+   Section 9: Frequently Asked Questions (FAQs)
+   ========================================================================== */
+.section-faqs {
+  padding: 20px 16px 36px;
+  background-color: var(--bg-page);
+  position: relative;
+  border-top: 1px solid rgba(198, 162, 39, 0.2);
+}
+
+.faqs-header {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.faqs-title {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1.35;
+  position: relative;
+  display: inline-block;
+}
+
+.faqs-title::after {
+  content: "";
+  display: block;
+  width: 44px;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 2px;
+  margin: 6px auto 0;
+}
+
+.faqs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+}
+
+.faq-item {
+  background: #FFFFFF;
+  border-radius: 18px;
+  border: 1.5px solid rgba(198, 162, 39, 0.35);
+  box-shadow: 0 4px 16px rgba(78, 52, 46, 0.06);
+  overflow: hidden;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.faq-item[open] {
+  border-color: var(--accent);
+  box-shadow: 0 6px 20px rgba(198, 162, 39, 0.15);
+}
+
+.faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 18px;
+  cursor: pointer;
+  list-style: none;
+  /* remove default arrow */
+  user-select: none;
+  gap: 12px;
+}
+
+.faq-question::-webkit-details-marker {
+  display: none;
+}
+
+.faq-q-text {
+  font-size: 16.5px;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1.4;
+  text-align: left;
+}
+
+.faq-item[open] .faq-q-text {
+  color: #8C6B13;
+}
+
+/* Custom + / - icon */
+.faq-toggle-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(198, 162, 39, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.faq-toggle-icon::before,
+.faq-toggle-icon::after {
+  content: "";
+  position: absolute;
+  background: var(--primary);
+  border-radius: 2px;
+  transition: transform 0.3s ease;
+}
+
+/* Horizontal line */
+.faq-toggle-icon::before {
+  width: 12px;
+  height: 2px;
+}
+
+/* Vertical line */
+.faq-toggle-icon::after {
+  width: 2px;
+  height: 12px;
+}
+
+.faq-item[open] .faq-toggle-icon {
+  background: var(--primary);
+  transform: rotate(45deg);
+}
+
+.faq-item[open] .faq-toggle-icon::before,
+.faq-item[open] .faq-toggle-icon::after {
+  background: #FFFFFF;
+}
+
+.faq-answer {
+  padding: 0 18px 18px 18px;
+  text-align: left;
+  border-top: 1px solid rgba(198, 162, 39, 0.15);
+  margin-top: -2px;
+  padding-top: 12px;
+}
+
+.faq-answer p {
+  font-size: 15px;
+  font-weight: 500;
+  color: #4A3E38;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   Section 10: Disclaimer, Policy Links & Footer
+   ========================================================================== */
+.site-footer {
+  width: 100%;
+  background-color: #FAF4EB;
+  border-top: 1px solid rgba(198, 162, 39, 0.25);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Disclaimer Box - Faint & subtle ("thoda invisible") */
+.footer-disclaimer-box {
+  padding: 22px 20px 14px;
+  text-align: center;
+  border-bottom: 1px solid rgba(198, 162, 39, 0.08);
+  opacity: 0.42;
+  transition: opacity 0.3s ease;
+}
+
+.footer-disclaimer-box:hover {
+  opacity: 0.85;
+}
+
+.disclaimer-heading {
+  font-size: 13px;
+  font-weight: 800;
+  color: #A89C92;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  margin-bottom: 8px;
+}
+
+.disclaimer-text {
+  font-size: 11.5px;
+  line-height: 1.6;
+  color: #A89C92;
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+/* Policy Links - Faint & subtle ("thoda invisible") */
+.footer-policy-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px 14px 18px;
+  background-color: #FAF4EB;
+  opacity: 0.42;
+  transition: opacity 0.3s ease;
+}
+
+.footer-policy-links:hover {
+  opacity: 0.9;
+}
+
+.policy-link {
+  font-size: 12px;
+  font-weight: 600;
+  color: #9C8F85;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.policy-link:hover {
+  color: var(--primary);
+}
+
+.policy-dot {
+  color: #D6CBC2;
+  font-weight: normal;
+}
+
+/* Dark Rich Copyright Bar */
+.footer-copyright-bar {
+  background-color: #1F1014;
+  padding: 22px 16px 26px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.copyright-brand {
+  font-size: 21px;
+  font-weight: 800;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  letter-spacing: -0.2px;
+}
+
+.brand-leaf {
+  font-size: 18px;
+}
+
+.copyright-text {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #D6BAC4;
+}
+
+/* ==========================================================================
+   Sticky Bottom CTA Bar (Dark Charcoal & Warm Amber Theme matching user reference)
+   ========================================================================== */
+.sticky-bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.sticky-bar-content {
+  width: 100%;
+  max-width: 450px;
+  background: #232120;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 -8px 25px rgba(0, 0, 0, 0.35);
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  pointer-events: auto;
+}
+
+.sticky-product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  min-width: 0;
+}
+
+.sticky-brand-title {
+  font-size: 17px;
+  font-weight: 800;
+  color: #D48806;
+  line-height: 1.25;
+  letter-spacing: -0.2px;
+}
+
+.sticky-brand-subtitle {
+  font-size: 13px;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.3;
+  margin-top: 3px;
+  letter-spacing: 0.1px;
+}
+
+/* Warm Golden Amber Pill Button */
+.sticky-order-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #DF920E 0%, #C47903 100%);
+  color: #FFFFFF;
+  height: 46px;
+  padding: 0 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 4px 18px rgba(196, 121, 3, 0.45);
+  flex-shrink: 0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sticky-order-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(196, 121, 3, 0.6);
+}
+
+.sticky-order-btn:active {
+  transform: translateY(1px);
+}
+
+.sticky-cart-icon {
+  width: 19px;
+  height: 19px;
+  stroke: #FFFFFF;
+  flex-shrink: 0;
+}
+
+.sticky-btn-text {
+  font-size: 15.5px;
+  font-weight: 800;
+  color: #FFFFFF;
+  white-space: nowrap;
+}
+
+/* Ensure body doesn't get covered by sticky bar */
+body {
+  padding-bottom: 64px;
+}
+
+/* Policy Link Button */
+.policy-link-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  color: #8A7B70;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.policy-link-btn:hover {
+  color: var(--primary);
+}
+
+/* ==========================================================================
+   Interactive Policy Modals
+   ========================================================================== */
+.policy-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(20, 10, 14, 0.65);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.policy-modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.policy-modal-card {
+  width: 100%;
+  max-width: 390px;
+  max-height: 85vh;
+  background: #FFFFFF;
+  border-radius: 26px;
+  border: 2px solid #FADBD8;
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.35);
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  transform: scale(0.92);
+  transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.policy-modal-card.active {
+  display: flex;
+  transform: scale(1);
+}
+
+/* Modal Header */
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 20px 14px 22px;
+  border-bottom: 1px solid #F5EBE6;
+  background: #FFFFFF;
+}
+
+.modal-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: #1D2A44;
+  line-height: 1.2;
+}
+
+.modal-close-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1.5px solid #F5B7B1;
+  background: #FDEDEC;
+  color: #8A1538;
+  font-size: 22px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  padding: 0;
+}
+
+.modal-close-btn:hover {
+  background: #FADBD8;
+  transform: scale(1.08);
+}
+
+/* Modal Body */
+.modal-body {
+  padding: 18px 22px 24px;
+  overflow-y: auto;
+  text-align: left;
+  background: #FFFFFF;
+}
+
+.modal-intro {
+  font-size: 14px;
+  font-weight: 500;
+  color: #3D352E;
+  line-height: 1.55;
+  margin-bottom: 14px;
+}
+
+.modal-section-title {
+  font-size: 15.5px;
+  font-weight: 800;
+  color: #1D2A44;
+  margin: 16px 0 6px;
+  line-height: 1.35;
+}
+
+.modal-body p {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #5C4B44;
+  line-height: 1.55;
+  margin-bottom: 6px;
+}
+  </style>
+</head>
+
+<body>
+
+  <!-- Main Mobile-First Wrapper (Max-width: 450px) -->
+  <main class="page-container">
+
+    <!-- Section 1: Hero Banner -->
+    <section class="section-hero" id="hero">
+      <div class="banner-wrapper">
+        <img src="images/banner.png" alt="SlimaX Natural Weight Loss Powder Banner" class="banner-img" loading="eager">
+      </div>
+    </section>
+
+    <!-- Section 2: Daily Pain Points / समस्याएं (Pinned Notebook Style) -->
+    <section class="section-pain-points" id="pain-points">
+      <div class="notebook-sheet">
+
+        <!-- Section Header -->
+        <div class="pain-header">
+          <h2 class="pain-title">
+            जो बातें आप किसी से कहते नहीं, <br>
+            <span>पर रोज़ महसूस करते हैं</span>
+          </h2>
+        </div>
+
+        <!-- Pinned Cards Container with Connecting Thread -->
+        <div class="pinned-cards-timeline">
+
+          <!-- Card 1 -->
+          <div class="pin-card-wrapper shift-left">
+            <div class="pin pin-red"></div>
+            <div class="pin-card">
+              <span class="card-number">01</span>
+              <h3 class="card-text">शादी-पार्टी में फ़ोटो खिंचवाने से बचना।</h3>
+              <div class="card-img-box">
+                <img src="images/problem-1.jpg?v=2" alt="शादी-पार्टी में फ़ोटो खिंचवाने से बचना" class="problem-img">
+              </div>
+            </div>
+            <!-- Dashed connector to next pin -->
+            <div class="thread-line thread-to-right"></div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="pin-card-wrapper shift-right">
+            <div class="pin pin-blue"></div>
+            <div class="pin-card">
+              <span class="card-number">02</span>
+              <h3 class="card-text">सीढ़ियाँ चढ़ते ही साँस का फूलना।</h3>
+              <div class="card-img-box">
+                <img src="images/problem-2.jpg?v=5" alt="सीढ़ियाँ चढ़ते ही साँस का फूलना" class="problem-img">
+              </div>
+            </div>
+            <!-- Dashed connector to next pin -->
+            <div class="thread-line thread-to-left"></div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="pin-card-wrapper shift-left">
+            <div class="pin pin-yellow"></div>
+            <div class="pin-card">
+              <span class="card-number">03</span>
+              <h3 class="card-text">पेट पर कसती बेल्ट और बटन।</h3>
+              <div class="card-img-box">
+                <img src="images/problem-3.jpg?v=4" alt="पेट पर कसती बेल्ट और बटन" class="problem-img">
+              </div>
+            </div>
+            <!-- Dashed connector to next pin -->
+            <div class="thread-line thread-to-right"></div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="pin-card-wrapper shift-right">
+            <div class="pin pin-green"></div>
+            <div class="pin-card">
+              <span class="card-number">04</span>
+              <h3 class="card-text">खाने के बाद भारीपन और आलस।</h3>
+              <div class="card-img-box">
+                <img src="images/problem-4.jpg?v=2" alt="खाने के बाद भारीपन और आलस" class="problem-img">
+              </div>
+            </div>
+            <!-- Dashed connector to next pin -->
+            <div class="thread-line thread-to-left"></div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="pin-card-wrapper shift-center">
+            <div class="pin pin-purple"></div>
+            <div class="pin-card">
+              <span class="card-number">05</span>
+              <h3 class="card-text">रिश्तेदारों के "थोड़ा ध्यान दो" वाले ताने।</h3>
+              <div class="card-img-box">
+                <img src="images/problem-5.jpg?v=2" alt="रिश्तेदारों के थोड़ा ध्यान दो वाले ताने" class="problem-img">
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Section 3: Product Showcase (Poster Style matching user reference) -->
+    <section class="section-product-showcase" id="product">
+
+      <!-- Section Heading Just Above the Box ("jaise aur heading hai waise") -->
+      <div class="product-showcase-header">
+        <h2 class="product-showcase-title">आपकी नई शुरुआत का साथी</h2>
+      </div>
+
+      <!-- Poster Card -->
+      <div class="product-poster-card">
+
+        <!-- Main Showcase Area: Left Product Jar, Right Arc Nodes -->
+        <div class="poster-showcase-row">
+          
+          <!-- Product Left -->
+          <div class="poster-product-wrap">
+            <div class="poster-product-img-box">
+              <img src="images/product-image.png?v=10" alt="Slimax Powder" class="poster-product-img">
+            </div>
+            <!-- 100% Ayurvedic Badge -->
+            <div class="poster-ayur-badge">
+              <span>🌿 100% Ayurvedic</span>
+            </div>
+          </div>
+
+          <!-- Features Right (Curved Along Arc) -->
+          <div class="poster-features-arc">
+            
+            <!-- Node 1 -->
+            <div class="arc-feature-item item-1">
+              <div class="arc-node-circle">
+                <span class="arc-icon">🌿</span>
+              </div>
+              <span class="arc-label">जड़ी-बूटियों पर आधारित</span>
+            </div>
+
+            <!-- Node 2 -->
+            <div class="arc-feature-item item-2">
+              <div class="arc-node-circle">
+                <span class="arc-icon">🥣</span>
+              </div>
+              <span class="arc-label">आसानी से घुलनशील</span>
+            </div>
+
+            <!-- Node 3 -->
+            <div class="arc-feature-item item-3">
+              <div class="arc-node-circle">
+                <span class="arc-icon">✨</span>
+              </div>
+              <span class="arc-label">रोज़ाना दिनचर्या के अनुकूल</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Description Below Poster -->
+      <div class="product-info-box">
+        <p class="product-desc">
+          पारंपरिक आयुर्वेदिक जड़ी-बूटियों से बना 100 gm का पाउडर, जो पाचन और मेटाबॉलिज़्म को सहारा देने वाली वज़न-प्रबंधन दिनचर्या का हिस्सा बनता है।
+        </p>
+      </div>
+
+    </section>
+
+    <!-- Section 4: महत्वपूर्ण पहलू (Alternating Staggered Cards as per Reference) -->
+    <section class="section-aspects" id="aspects">
+
+      <div class="aspects-header">
+        <h2 class="aspects-title">स्वस्थ वज़न प्रबंधन के महत्वपूर्ण पहलू</h2>
+      </div>
+
+      <div class="aspects-timeline">
+
+        <!-- Row 1: Image Left, Text Right -->
+        <div class="aspect-row img-left">
+          <div class="aspect-img-wrapper">
+            <div class="aspect-num-badge">1</div>
+            <div class="aspect-img-inner">
+              <img src="images/4.1.avif" alt="Digestive Care" class="aspect-img">
+            </div>
+          </div>
+          <div class="aspect-text-card">
+            <h3 class="aspect-card-title">01 — Digestive Care</h3>
+            <p class="aspect-card-desc">पाचन की रोज़ाना देखभाल के लिए त्रिफला युक्त फ़ॉर्मूला।</p>
+          </div>
+        </div>
+
+        <!-- Row 2: Text Left, Image Right -->
+        <div class="aspect-row img-right">
+          <div class="aspect-text-card">
+            <h3 class="aspect-card-title">02 — Metabolism Support</h3>
+            <p class="aspect-card-desc">मेटाबॉलिज़्म को ध्यान में रखकर बनाया गया ग्रीन टी युक्त फ़ॉर्मूला।</p>
+          </div>
+          <div class="aspect-img-wrapper">
+            <div class="aspect-num-badge badge-left">2</div>
+            <div class="aspect-img-inner">
+              <img src="images/4.2.avif" alt="Metabolism Support" class="aspect-img">
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 3: Image Left, Text Right -->
+        <div class="aspect-row img-left">
+          <div class="aspect-img-wrapper">
+            <div class="aspect-num-badge">3</div>
+            <div class="aspect-img-inner">
+              <img src="images/4.3.avif" alt="Easy to Take" class="aspect-img">
+            </div>
+          </div>
+          <div class="aspect-text-card">
+            <h3 class="aspect-card-title">03 — Easy to Take</h3>
+            <p class="aspect-card-desc">पैक के निर्देशों के अनुसार गुनगुने पानी के साथ लें।</p>
+          </div>
+        </div>
+
+        <!-- Row 4: Text Left, Image Right -->
+        <div class="aspect-row img-right">
+          <div class="aspect-text-card">
+            <h3 class="aspect-card-title">04 — Weight Management Support</h3>
+            <p class="aspect-card-desc">संतुलित खानपान और एक्टिव रूटीन के साथ वज़न-प्रबंधन का एक आसान हिस्सा।</p>
+          </div>
+          <div class="aspect-img-wrapper">
+            <div class="aspect-num-badge badge-left">4</div>
+            <div class="aspect-img-inner">
+              <img src="images/4.4.avif" alt="Weight Management Support" class="aspect-img">
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Section 5: जड़ी-बूटियाँ (Herbs - Leaf Arch Cards matching Reference) -->
+    <section class="section-herbs" id="herbs">
+
+      <!-- Section Title -->
+      <div class="herbs-header">
+        <h2 class="herbs-title">
+          <span>प्रकृति से चुनी हुई</span> जड़ी-बूटियाँ
+        </h2>
+      </div>
+
+      <!-- Herbs Stacked Cards List -->
+      <div class="herbs-cards-list">
+
+        <!-- Card 1: गुग्गुल -->
+        <div class="herb-card">
+          <div class="herb-img-arch">
+            <img src="images/i1.avif" alt="गुग्गुल" class="herb-img">
+          </div>
+          <div class="herb-content">
+            <h3 class="herb-name">गुग्गुल</h3>
+            <p class="herb-desc">वसा-संतुलन की आयुर्वेदिक परंपरा में प्रसिद्ध।</p>
+          </div>
+        </div>
+
+        <!-- Card 2: त्रिफला -->
+        <div class="herb-card">
+          <div class="herb-img-arch">
+            <img src="images/i2.avif" alt="त्रिफला" class="herb-img">
+          </div>
+          <div class="herb-content">
+            <h3 class="herb-name">त्रिफला</h3>
+            <p class="herb-desc">पाचन और शुद्धि के लिए सदियों से उपयोग में।</p>
+          </div>
+        </div>
+
+        <!-- Card 3: ग्रीन टी अर्क -->
+        <div class="herb-card">
+          <div class="herb-img-arch">
+            <img src="images/i3.avif" alt="ग्रीन टी अर्क" class="herb-img">
+          </div>
+          <div class="herb-content">
+            <h3 class="herb-name">ग्रीन टी अर्क</h3>
+            <p class="herb-desc">मेटाबॉलिज़्म सपोर्ट के लिए लोकप्रिय।</p>
+          </div>
+        </div>
+
+        <!-- Card 4: पिप्पली -->
+        <div class="herb-card">
+          <div class="herb-img-arch">
+            <img src="images/i4.avif" alt="पिप्पली" class="herb-img">
+          </div>
+          <div class="herb-content">
+            <h3 class="herb-name">पिप्पली</h3>
+            <p class="herb-desc">पाचन-अग्नि को जगाए रखने में पारंपरिक रूप से प्रयुक्त।</p>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Doctor Recommendation Section (डॉक्टर की सिफारिश) -->
+    <section class="section-doctor-recommend" id="doctor">
+      <div class="doctor-header">
+        <h2 class="doctor-title">डॉक्टर की सिफारिश</h2>
+      </div>
+
+      <div class="doctor-card">
+        <!-- Doctor Image with Badge -->
+        <div class="doctor-img-frame">
+          <img src="images/doctor.jpg" alt="आयुर्वेदिक विशेषज्ञ - डॉक्टर की सिफारिश" class="doctor-img">
+          <div class="doctor-tag">
+            <span class="tag-icon">🩺</span>
+            <span>Ayurvedic Expert Recommendation</span>
+          </div>
+        </div>
+
+        <!-- Guidance Content -->
+        <div class="doctor-content">
+          <p class="doctor-p-main">
+            <strong>स्वस्थ वज़न प्रबंधन सही पाचन और सक्रिय दिनचर्या से शुरू होता है।</strong> आहार, मेटाबॉलिज़्म और नियमित आदतें—ये सभी वज़न संतुलन में मुख्य भूमिका निभाते हैं।
+          </p>
+
+          <!-- Highlight Callout Box -->
+          <div class="doctor-callout-box">
+            <p>
+              <strong>छोटे कदम, स्थिर परिणाम:</strong> संतुलित खान-पान और Slimax Powder का नियमित सेवन मेटाबॉलिज़्म को प्राकृतिक रूप से सहारा देता है।
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Trust & Quality Certifications (गुणवत्ता और पारदर्शिता का भरोसा) -->
+    <section class="section-trust-quality" id="trust">
+      <div class="trust-header">
+        <h2 class="trust-title">गुणवत्ता और पारदर्शिता का भरोसा</h2>
+      </div>
+
+      <div class="trust-badges-grid">
+        <!-- Badge 1: GMP -->
+        <div class="trust-card">
+          <div class="trust-img-wrap">
+            <img src="images/cert1.avif" alt="GMP" class="trust-img">
+          </div>
+          <span class="trust-card-label">GMP</span>
+        </div>
+
+        <!-- Badge 2: ISO -->
+        <div class="trust-card">
+          <div class="trust-img-wrap">
+            <img src="images/iso.avif" alt="ISO" class="trust-img">
+          </div>
+          <span class="trust-card-label">ISO</span>
+        </div>
+
+        <!-- Badge 3: FSSAI -->
+        <div class="trust-card">
+          <div class="trust-img-wrap">
+            <img src="images/cert3.avif" alt="FSSAI" class="trust-img">
+          </div>
+          <span class="trust-card-label">FSSAI</span>
+        </div>
+
+        <!-- Badge 4: Testing -->
+        <div class="trust-card">
+          <div class="trust-img-wrap">
+            <img src="images/cert4.avif" alt="testing" class="trust-img">
+          </div>
+          <span class="trust-card-label">testing</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 7: Order / Enquiry Form (Order Now - Slimax की जानकारी प्राप्त करें) -->
+    <section class="section-order-form" id="order">
+      <div class="order-form-container">
+
+        <!-- Header Badge -->
+        <div class="order-badge">
+          <span class="badge-dot"></span>
+          <span>Order Now</span>
+        </div>
+
+        <!-- Title -->
+        <h2 class="order-form-title">Slimax की जानकारी प्राप्त करें</h2>
+
+        <!-- Form -->
+        <form class="lead-order-form" id="leadForm" onsubmit="return false;" autocomplete="off">
+
+          <!-- Field 1: Name -->
+          <div class="form-group">
+            <label for="custName" class="form-label">अपना नाम</label>
+            <div class="input-wrapper">
+              <span class="input-icon user-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="#5A3A42">
+                  <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                </svg>
+              </span>
+              <input type="text" id="custName" name="client_name" class="form-input" placeholder="अपना पूरा नाम दर्ज करें।"
+                required autocomplete="off" spellcheck="false" autocorrect="off" autocapitalize="off" data-lpignore="true">
+            </div>
+            <div class="field-error-box" id="nameError" style="display: none;">
+              <div class="error-badge-icon">!</div>
+              <span class="error-text">कृपया अपना पूरा नाम दर्ज करें।</span>
+            </div>
+          </div>
+
+          <!-- Field 2: Mobile Number -->
+          <div class="form-group">
+            <label for="custPhone" class="form-label">मोबाइल नंबर</label>
+            <div class="input-wrapper">
+              <span class="input-icon phone-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="#BA134B">
+                  <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                </svg>
+              </span>
+              <input type="tel" id="custPhone" name="client_phone" class="form-input"
+                placeholder="अपना 10 अंकों का मोबाइल नंबर दर्ज करें।" pattern="[0-9]{10}" maxlength="10" required
+                autocomplete="off" autocorrect="off" autocapitalize="off" data-lpignore="true">
+            </div>
+            <div class="field-error-box" id="phoneError" style="display: none;">
+              <div class="error-badge-icon">!</div>
+              <span class="error-text">मोबाइल नंबर केवल 6, 7, 8 या 9 से ही शुरू होना चाहिए।</span>
+            </div>
+          </div>
+
+          <!-- CTA Button -->
+          <button type="submit" class="order-submit-btn" id="submitBtn">
+            <span class="btn-text">अभी जानकारी प्राप्त करें</span>
+            <span class="btn-arrow">➔</span>
+          </button>
+
+          <!-- Form Message / Feedback Container -->
+          <div class="form-feedback" id="formFeedback"></div>
+
+          <!-- Trust Subtext -->
+          <div class="order-trust-strip">
+            <span class="trust-pill">🔒 Secure Order</span>
+            <span class="trust-sep">·</span>
+            <span class="trust-pill">📦 Cash on Delivery</span>
+            <span class="trust-sep">·</span>
+            <span class="trust-pill">ℹ️ Product Information</span>
+          </div>
+
+        </form>
+
+      </div>
+    </section>
+
+    <!-- Section 8: Customer Experiences (ग्राहकों के सच्चे अनुभव) -->
+    <section class="section-customer-reviews" id="reviews">
+      <div class="reviews-header">
+        <h2 class="reviews-title">ग्राहकों के सच्चे अनुभव</h2>
+      </div>
+
+      <div class="reviews-list">
+
+        <!-- Review Card 1: राघव शर्मा -->
+        <div class="review-card">
+          <div class="quote-watermark">❝</div>
+          <div class="review-user-row">
+            <div class="review-avatar-frame">
+              <img src="images/r2.jpg" alt="राघव शर्मा" class="review-avatar">
+            </div>
+            <div class="review-user-info">
+              <div class="user-name-line">
+                <span class="user-name">राघव शर्मा</span>
+                <span class="verified-pill">✓ Verified</span>
+              </div>
+              <div class="user-location">📍 लखनऊ, उत्तर प्रदेश</div>
+            </div>
+          </div>
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">
+            "लगातार सिटिंग वर्क और खराब लाइफस्टाइल से मेरा पेट काफी निकल आया था और एसिडिटी-भारीपन बना रहता था। Slimax
+            Powder को मैंने रोज़ सुबह गुनगुने पानी के साथ लेना शुरू किया। 3 से 4 हफ़्तों में ही पेट का फूलना बंद हुआ,
+            पाचन एकदम दुरुस्त हुआ और शरीर में बहुत हल्कापन आ गया। अब दिनभर एनर्जी बनी रहती है, सच में बहुत असरदार लगा!"
+          </p>
+        </div>
+
+        <!-- Review Card 2: अंजलि वर्मा -->
+        <div class="review-card">
+          <div class="quote-watermark">❝</div>
+          <div class="review-user-row">
+            <div class="review-avatar-frame">
+              <img src="images/r1.jpg" alt="अंजलि वर्मा" class="review-avatar">
+            </div>
+            <div class="review-user-info">
+              <div class="user-name-line">
+                <span class="user-name">अंजलि वर्मा</span>
+                <span class="verified-pill">✓ Verified</span>
+              </div>
+              <div class="user-location">📍 पुणे, महाराष्ट्र</div>
+            </div>
+          </div>
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">
+            "अनियमित दिनचर्या और खानपान की वजह से वज़न लगातार बढ़ रहा था और पेट भारी रहता था। Slimax Powder लेने के बाद
+            से पाचन में सुधार हुआ, सुस्ती दूर हुई और शरीर में हल्कापन महसूस होने लगा है। बहुत ही भरोसेमंद और असरदार
+            आयुर्वेदिक उत्पाद!"
+          </p>
+        </div>
+
+        <!-- Review Card 3: सुनीता वर्मा -->
+        <div class="review-card">
+          <div class="quote-watermark">❝</div>
+          <div class="review-user-row">
+            <div class="review-avatar-frame">
+              <img src="images/r3.jpg" alt="सुनीता वर्मा" class="review-avatar">
+            </div>
+            <div class="review-user-info">
+              <div class="user-name-line">
+                <span class="user-name">सुनीता वर्मा</span>
+                <span class="verified-pill">✓ Verified</span>
+              </div>
+              <div class="user-location">📍 जयपुर, राजस्थान</div>
+            </div>
+          </div>
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">
+            "वज़न बढ़ने और पाचन की समस्या से परेशान थी। कई चीज़ें ट्राई कीं लेकिन कोई ख़ास फ़ायदा नहीं हुआ। जब से Slimax
+            Powder लेना शुरू किया, पेट हल्का रहता है और वज़न भी धीरे-धीरे संतुलित होने लगा है। बहुत ही भरोसेमंद और
+            असरदार आयुर्वेदिक उत्पाद!"
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Section 9: Frequently Asked Questions (FAQs) -->
+    <section class="section-faqs" id="faqs">
+      <div class="faqs-header">
+        <h2 class="faqs-title">FAQs</h2>
+      </div>
+
+      <div class="faqs-list">
+        
+        <!-- FAQ Item 1 -->
+        <details class="faq-item" open>
+          <summary class="faq-question">
+            <span class="faq-q-text">1. Slimax किसके लिए है?</span>
+            <span class="faq-toggle-icon"></span>
+          </summary>
+          <div class="faq-answer">
+            <p>वयस्कों के लिए, जो संतुलित खान-पान और गतिविधि के साथ वज़न-प्रबंधन की दिनचर्या अपनाना चाहते हैं।</p>
+          </div>
+        </details>
+
+        <!-- FAQ Item 2 -->
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span class="faq-q-text">2. Slimax कब लें?</span>
+            <span class="faq-toggle-icon"></span>
+          </summary>
+          <div class="faq-answer">
+            <p>भोजन के बाद, गुनगुने पानी के साथ। मात्रा पैक पर देखें।</p>
+          </div>
+        </details>
+
+        <!-- FAQ Item 3 -->
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span class="faq-q-text">3. सामग्री क्या है?</span>
+            <span class="faq-toggle-icon"></span>
+          </summary>
+          <div class="faq-answer">
+            <p>गुग्गुल, त्रिफला, ग्रीन टी अर्क, पिप्पली etc.</p>
+          </div>
+        </details>
+
+        <!-- FAQ Item 4 -->
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span class="faq-q-text">4. ऑर्डर कैसे करें?</span>
+            <span class="faq-toggle-icon"></span>
+          </summary>
+          <div class="faq-answer">
+            <p>फ़ॉर्म भरें, हमारी टीम कॉल करके जानकारी देगी।</p>
+          </div>
+        </details>
+
+        <!-- FAQ Item 5 -->
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span class="faq-q-text">5. क्या COD उपलब्ध है?</span>
+            <span class="faq-toggle-icon"></span>
+          </summary>
+          <div class="faq-answer">
+            <p>जहाँ सुविधा उपलब्ध है, वहाँ Cash on Delivery का विकल्प चुना जा सकता है।</p>
+          </div>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- Section 10: Disclaimer, Policy Links & Footer -->
+    <footer class="site-footer">
+      <!-- Disclaimer Box -->
+      <div class="footer-disclaimer-box">
+        <h4 class="disclaimer-heading">DISCLAIMER</h4>
+        <p class="disclaimer-text">
+          SLIMAX is an Ayurvedic support product. Results may vary from person to person. It is not intended to diagnose, treat, cure, or prevent any disease. Consult a qualified healthcare professional before use if you have a medical condition or take medication.
+        </p>
+      </div>
+
+      <!-- Legal Policy Links -->
+      <div class="footer-policy-links">
+        <button type="button" class="policy-link-btn" id="openPrivacy">Privacy Policy</button>
+        <span class="policy-dot">·</span>
+        <button type="button" class="policy-link-btn" id="openTerms">Terms &amp; Conditions</button>
+        <span class="policy-dot">·</span>
+        <button type="button" class="policy-link-btn" id="openRefund">Refund and Cancellation</button>
+      </div>
+
+      <!-- Copyright Bar -->
+      <div class="footer-copyright-bar">
+        <div class="copyright-brand">
+          <span class="brand-leaf">🌿</span> Slimax Powder
+        </div>
+        <p class="copyright-text">
+          &copy; 2026 Slimax Powder. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- Sticky Bottom CTA Bar -->
+  <div class="sticky-bottom-bar" id="stickyBar">
+    <div class="sticky-bar-content">
+      <div class="sticky-product-info">
+        <div class="sticky-brand-title">Slimax Powder</div>
+        <div class="sticky-brand-subtitle">Free Delivery · COD Available</div>
+      </div>
+      <a href="#order" class="sticky-order-btn">
+        <svg class="sticky-cart-icon" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="20" cy="21" r="1"></circle>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+        <span class="sticky-btn-text">Order करें</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Policy Modals Overlay & Content -->
+  <div class="policy-modal-overlay" id="policyOverlay" role="dialog" aria-modal="true">
+    
+    <!-- 1. Privacy Policy Modal -->
+    <div class="policy-modal-card" id="privacyModal">
+      <div class="modal-header">
+        <h3 class="modal-title">Privacy Policy</h3>
+        <button type="button" class="modal-close-btn" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-intro">We (SLIMAX) respect your privacy. This Policy explains how we collect, use and protect your data.</p>
+        
+        <h4 class="modal-section-title">1. What information do we collect?</h4>
+        <p>Your name, mobile number, address, and PIN code are collected when filling out the order form.</p>
+        
+        <h4 class="modal-section-title">2. Usage</h4>
+        <p>For order process and delivery<br>For order related communication<br>For customer support</p>
+        
+        <h4 class="modal-section-title">3. Data security</h4>
+        <p>Your information is stored securely and is not sold to any third parties, except to delivery partners to fulfill orders.</p>
+        
+        <h4 class="modal-section-title">4. Contact</h4>
+        <p>For any questions regarding privacy, please contact the number provided in the order form.</p>
+      </div>
+    </div>
+
+    <!-- 2. Terms & Conditions Modal -->
+    <div class="policy-modal-card" id="termsModal">
+      <div class="modal-header">
+        <h3 class="modal-title">Terms &amp; Conditions</h3>
+        <button type="button" class="modal-close-btn" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-intro">By using this website, you agree to the following rules.</p>
+        
+        <h4 class="modal-section-title">1. Product Information</h4>
+        <p>SLIMAX is an Ayurvedic support product. Results may vary from person to person, and it is not a substitute for treatment of any disease.</p>
+        
+        <h4 class="modal-section-title">2. Order</h4>
+        <p>After confirming the order, the delivery timeline may vary depending on the location.</p>
+        
+        <h4 class="modal-section-title">3. Price</h4>
+        <p>Prices and offers shown on the website may change from time to time.</p>
+        
+        <h4 class="modal-section-title">4. Responsibility</h4>
+        <p>Consult a doctor before using the product, especially if you are pregnant, breastfeeding, or have a medical condition.</p>
+      </div>
+    </div>
+
+    <!-- 3. Refund & Cancellation Policy Modal -->
+    <div class="policy-modal-card" id="refundModal">
+      <div class="modal-header">
+        <h3 class="modal-title">Refund &amp; Cancellation Policy</h3>
+        <button type="button" class="modal-close-btn" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <h4 class="modal-section-title">1. Order Cancellation</h4>
+        <p>Orders can be canceled before they are shipped. For cancellations, please contact the contact number provided in the order form.</p>
+        
+        <h4 class="modal-section-title">2. Refund</h4>
+        <p>If you receive a damaged or wrong product, a replacement or refund will be processed if reported within 24-48 hours of delivery.</p>
+        
+        <h4 class="modal-section-title">3. Refund Timeline</h4>
+        <p>Approved refunds are processed to the original payment method within 5-7 business days.</p>
+        
+        <h4 class="modal-section-title">4. Non-Returnable</h4>
+        <p>For health and hygiene reasons, opened/used products cannot be returned, unless they are damaged or defective.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+// SlimaX Landing Page Scripts
+document.addEventListener('DOMContentLoaded', () => {
+  console.log('Landing page initialized successfully with Ayurvedic theme.');
+
+  // Form Handling with Real-time & Submit Validation
+  const leadForm = document.getElementById('leadForm');
+  const custName = document.getElementById('custName');
+  const custPhone = document.getElementById('custPhone');
+  const nameError = document.getElementById('nameError');
+  const phoneError = document.getElementById('phoneError');
+  const formFeedback = document.getElementById('formFeedback');
+  const submitBtn = document.getElementById('submitBtn');
+
+  // Disable browser autofill recommendations completely
+  [custName, custPhone].forEach(input => {
+    if (input) {
+      input.setAttribute('autocomplete', 'off');
+      input.setAttribute('aria-autocomplete', 'none');
+    }
+  });
+
+  function showError(inputEl, errorBox, message) {
+    if (inputEl) inputEl.classList.add('is-invalid');
+    if (errorBox) {
+      const textSpan = errorBox.querySelector('.error-text');
+      if (textSpan && message) textSpan.textContent = message;
+      errorBox.style.display = 'flex';
+    }
+  }
+
+  function hideError(inputEl, errorBox) {
+    if (inputEl) inputEl.classList.remove('is-invalid');
+    if (errorBox) {
+      errorBox.style.display = 'none';
+    }
+  }
+
+  // Real-time phone validation
+  if (custPhone) {
+    custPhone.addEventListener('input', function () {
+      // Allow only numbers and max 10 digits
+      this.value = this.value.replace(/\D/g, '').slice(0, 10);
+      const val = this.value;
+
+      if (val.length === 0) {
+        hideError(custPhone, phoneError);
+        return;
+      }
+
+      // Check first digit: must start with 6, 7, 8, or 9
+      const firstDigit = val.charAt(0);
+      if (!['6', '7', '8', '9'].includes(firstDigit)) {
+        showError(custPhone, phoneError, 'मोबाइल नंबर केवल 6, 7, 8 या 9 से ही शुरू होना चाहिए।');
+      } else {
+        hideError(custPhone, phoneError);
+      }
+    });
+
+    custPhone.addEventListener('blur', function () {
+      const val = this.value.trim();
+      if (val.length > 0 && val.length < 10 && ['6', '7', '8', '9'].includes(val.charAt(0))) {
+        showError(custPhone, phoneError, 'कृपया पूरा 10 अंकों का मोबाइल नंबर दर्ज करें।');
+      }
+    });
+  }
+
+  // Real-time name validation - Allow ONLY letters (Hindi & English) and spaces
+  if (custName) {
+    custName.addEventListener('input', function () {
+      // Instantly remove any numbers or symbols
+      const cleanVal = this.value.replace(/[^a-zA-Z\u0900-\u097F\s]/g, '');
+      if (this.value !== cleanVal) {
+        this.value = cleanVal;
+      }
+
+      if (this.value.trim().length >= 2) {
+        hideError(custName, nameError);
+      }
+    });
+
+    // Prevent typing digits (0-9 from keyboard and numpad)
+    custName.addEventListener('keydown', function (e) {
+      if ((e.keyCode >= 48 && e.keyCode <= 57 && !e.shiftKey) || (e.keyCode >= 96 && e.keyCode <= 105)) {
+        e.preventDefault();
+      }
+    });
+
+    custName.addEventListener('blur', function () {
+      const val = this.value.trim();
+      if (val.length > 0 && val.length < 2) {
+        showError(custName, nameError, 'कृपया सही नाम दर्ज करें (केवल अक्षर)।');
+      }
+    });
+  }
+
+  if (leadForm) {
+    leadForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      let isValid = true;
+      const nameVal = custName ? custName.value.trim() : '';
+      const phoneVal = custPhone ? custPhone.value.trim() : '';
+
+      // Validate Name (Only letters allowed)
+      if (!nameVal) {
+        showError(custName, nameError, 'कृपया अपना पूरा नाम दर्ज करें।');
+        if (isValid) custName.focus();
+        isValid = false;
+      } else if (!/^[a-zA-Z\u0900-\u097F\s]{2,}$/.test(nameVal)) {
+        showError(custName, nameError, 'नाम में केवल अक्षर ही दर्ज करें।');
+        if (isValid) custName.focus();
+        isValid = false;
+      } else {
+        hideError(custName, nameError);
+      }
+
+      // Validate Phone
+      if (!phoneVal) {
+        showError(custPhone, phoneError, 'कृपया अपना 10 अंकों का मोबाइल नंबर दर्ज करें।');
+        if (isValid) custPhone.focus();
+        isValid = false;
+      } else if (!['6', '7', '8', '9'].includes(phoneVal.charAt(0))) {
+        showError(custPhone, phoneError, 'मोबाइल नंबर केवल 6, 7, 8 या 9 से ही शुरू होना चाहिए।');
+        if (isValid) custPhone.focus();
+        isValid = false;
+      } else if (phoneVal.length !== 10) {
+        showError(custPhone, phoneError, 'कृपया पूरा 10 अंकों का मोबाइल नंबर दर्ज करें।');
+        if (isValid) custPhone.focus();
+        isValid = false;
+      } else {
+        hideError(custPhone, phoneError);
+      }
+
+      if (!isValid) return;
+
+      // Success - Directly redirect to Thank You Page without showing any green message
+      submitBtn.disabled = true;
+      submitBtn.style.opacity = '0.8';
+      window.location.href = 'thankyou.html';
+    });
+  }
+
+  function showFeedback(msg, type) {
+    if (!formFeedback) return;
+    formFeedback.textContent = msg;
+    formFeedback.className = 'form-feedback ' + type;
+  }
+
+  // FAQ Accordion Behavior (Only one item open at a time)
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach((item) => {
+    item.addEventListener('toggle', () => {
+      if (item.open) {
+        faqItems.forEach((other) => {
+          if (other !== item && other.open) {
+            other.removeAttribute('open');
+          }
+        });
+      }
+    });
+  });
+
+  // Policy Modals Functionality
+  const policyOverlay = document.getElementById('policyOverlay');
+  const modalCards = document.querySelectorAll('.policy-modal-card');
+  const openPrivacyBtn = document.getElementById('openPrivacy');
+  const openTermsBtn = document.getElementById('openTerms');
+  const openRefundBtn = document.getElementById('openRefund');
+
+  function openModal(modalId) {
+    if (!policyOverlay) return;
+    modalCards.forEach((card) => card.classList.remove('active'));
+    const target = document.getElementById(modalId);
+    if (target) {
+      target.classList.add('active');
+      policyOverlay.classList.add('active');
+      document.body.style.overflow = 'hidden'; // prevent background scrolling
+    }
+  }
+
+  function closeModal() {
+    if (!policyOverlay) return;
+    policyOverlay.classList.remove('active');
+    modalCards.forEach((card) => card.classList.remove('active'));
+    document.body.style.overflow = '';
+  }
+
+  if (openPrivacyBtn) {
+    openPrivacyBtn.addEventListener('click', () => openModal('privacyModal'));
+  }
+  if (openTermsBtn) {
+    openTermsBtn.addEventListener('click', () => openModal('termsModal'));
+  }
+  if (openRefundBtn) {
+    openRefundBtn.addEventListener('click', () => openModal('refundModal'));
+  }
+
+  // Close on cross button
+  document.querySelectorAll('.modal-close-btn').forEach((btn) => {
+    btn.addEventListener('click', closeModal);
+  });
+
+  // Close on clicking backdrop
+  if (policyOverlay) {
+    policyOverlay.addEventListener('click', (e) => {
+      if (e.target === policyOverlay) {
+        closeModal();
+      }
+    });
+  }
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && policyOverlay && policyOverlay.classList.contains('active')) {
+      closeModal();
+    }
+  });
+});
+
+  </script>
+</body>
+
+</html>
